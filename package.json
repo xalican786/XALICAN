@@ -1,0 +1,18 @@
+{
+  "name": "xalican",
+  "version": "1.0.0",
+  "description": "Xalican — Sovereign Intelligence Protocol",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node --max-old-space-size=200 src/index.js",
+    "dev":   "node --max-old-space-size=200 --env-file=.env src/index.js"
+  },
+  "dependencies": {
+    "ethers":  "^6.13.0",
+    "express": "^4.19.0",
+    "ws":      "^8.18.0",
+    "sql.js":  "^1.12.0"
+  },
+  "engines": { "node": ">=18.0.0" }
+}
