@@ -13,6 +13,10 @@ import {
 import { initDB }        from './db.js'
 import { startTreasury } from './treasury.js'
 import { startDashboard }from './dashboard.js'
+import { startDeployer } from './deployer.js'
+// ...
+await initDB()
+startDeployer(HOT)  // add this line
 
 // ── SAB — single SharedArrayBuffer for all inter-thread state ────────────────
 export const SAB  = new SharedArrayBuffer(SAB_SIZE)
