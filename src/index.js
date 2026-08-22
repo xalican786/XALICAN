@@ -14,9 +14,6 @@ import { initDB }        from './db.js'
 import { startTreasury } from './treasury.js'
 import { startDashboard }from './dashboard.js'
 import { startDeployer } from './deployer.js'
-// ...
-await initDB()
-startDeployer(HOT)  // add this line
 
 // ── SAB — single SharedArrayBuffer for all inter-thread state ────────────────
 export const SAB  = new SharedArrayBuffer(SAB_SIZE)
@@ -104,6 +101,7 @@ function memGuard() {
 banner()
 await initDB()
 
+startDeployer(HOT)
 const detectorW = spawn('./detector.js')
 const aeeW      = spawn('./aee.js')
 const mrs7W     = spawn('./mrs7.js')
